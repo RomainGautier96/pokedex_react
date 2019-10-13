@@ -17,7 +17,6 @@ class Accueil extends Component {
             if (this.props.data !== this.state.data) {
             this.setState({data : this.props.data, test : this.state.test+1});
             this.setState({newData : this.state.data});
-            console.log("Jtai ken");
             }
         }
         

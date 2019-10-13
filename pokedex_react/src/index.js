@@ -20,7 +20,7 @@ class App extends Component {
         this.setState({ isLoading: true });
         try {
             const response = await Axios.get(
-            "https://pokeapi.co/api/v2/pokemon/?limit=964"
+            "https://pokeapi.co/api/v2/pokemon/?limit=5"
             );
             const data = response.data.results;
 

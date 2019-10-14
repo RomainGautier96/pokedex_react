@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-import Loader from "./components/Loader.js";
-import List from "./components/List.js";
 import Axios from 'axios';
 import Accueil from "./pages/Accueil.js"
 
@@ -20,7 +16,7 @@ class App extends Component {
         this.setState({ isLoading: true });
         try {
             const response = await Axios.get(
-            "https://pokeapi.co/api/v2/pokemon/?limit=5"
+            "https://pokeapi.co/api/v2/pokemon/?limit=964"
             );
             const data = response.data.results;
 

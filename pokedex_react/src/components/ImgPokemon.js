@@ -33,7 +33,6 @@ class ImgPokemon extends Component {
       );
     }
 
-   
-  }
+}
 
 export default ImgPokemon;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import List from "../components/List.js";
 import Form from "../components/Form.js";
-import Axios from 'axios';
 
 class Accueil extends Component {
     constructor(props) {
@@ -24,7 +23,6 @@ class Accueil extends Component {
   
 
     handleChange = e => {
-    
         const result = this.state.data.filter(pokemon =>
         pokemon.name.includes(e.currentTarget.value)
         );

@@ -25,6 +25,7 @@ class List extends Component {
                             <a href={'/' + pokemon.name}> <h2> {pokemon.name.toUpperCase()}</h2> </a>
                     
                     <ImgPokemon url={pokemon.url} />
+                    <hr />
                     </div>
                 ))
                 }

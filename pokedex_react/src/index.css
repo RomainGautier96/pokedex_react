@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.App{
+  text-align: center;
+}
+
+
 .infoPokemon table {
   border-width:1px; 
   border-style:solid; 

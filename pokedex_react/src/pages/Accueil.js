@@ -40,7 +40,7 @@ class Accueil extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <h1> Bienvenue sur le Pokedex </h1>
         <Form
           valueResearch={this.state.valueResearch}

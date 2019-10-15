@@ -10,7 +10,7 @@ class Accueil extends Component {
     }
 
 
-    componentDidUpdate() {
+    componentDidMount() {
         // Utilisation classique (pensez bien à comparer les props) :
         if ( this.state.test !== 2){
             if (this.props.data !== this.state.data) {
@@ -37,6 +37,7 @@ class Accueil extends Component {
     };
 
 
+
   render() {
     return (
       <div>
@@ -45,7 +46,7 @@ class Accueil extends Component {
           valueResearch={this.state.valueResearch}
           changeValue={this.handleChange}
         />
-         {this.state.newData.length === 0 ? <List data={this.state.data} /> : <List data={this.state.newData} /> }
+         {this.state.newData.length === 0 ? <List data={this.state.data} /> : <List data={this.state.newData} /> };
         
       </div>
     );

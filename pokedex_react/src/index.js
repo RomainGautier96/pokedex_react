@@ -4,6 +4,8 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Axios from 'axios';
 import Accueil from "./pages/Accueil.js"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import InfoPokemon from './components/InfoPokemon';
 
 class App extends Component {
 
@@ -31,9 +33,15 @@ class App extends Component {
 
     render() {
       return (
-        <div>
-          <Accueil data={this.state.data} />
-        </div>
+
+        <Router>
+            <Switch>
+                <Route path='/:namePoke' component={InfoPokemon} />
+                <Route path='/' component={() => <Accueil data={this.state.data} />} /> 
+                
+                
+            </Switch>
+        </Router>
       );
     }
 

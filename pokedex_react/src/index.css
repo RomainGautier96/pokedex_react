@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.infoPokemon table {
+  border-width:1px; 
+  border-style:solid; 
+  border-color:black;
+  width:100%;
+  }
+
+.infoPokemon td { 
+  border-width:1px;
+  border-style:solid; 
+  border-color:black;
+  width:50%;
+  text-align : center;
+  }

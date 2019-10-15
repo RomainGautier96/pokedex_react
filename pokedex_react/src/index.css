@@ -26,3 +26,27 @@ code {
   width:50%;
   text-align : center;
   }
+
+  .retourAccueil{
+    text-align: center;
+    margin-top: 25px;
+  }
+.retourAccueil a {
+    background-color: #555;
+  color: white;
+  padding: 1em 48%;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+}
+
+.retourAccueil a:hover {
+  background-color: #666;
+  cursor: pointer;
+}
+
+.retourAccueil a:active {
+  box-shadow: none;
+  top: 5px;
+}

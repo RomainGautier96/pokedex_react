@@ -28,7 +28,7 @@ class ImgPokemon extends Component {
     render() {
       return (
         <div>
-            {this.state.isLoader ? <Loader /> : <p> <img src={this.state.img} /> Image de :  {this.state.pokeName} </p> }
+            {this.state.isLoader ? <Loader /> : <p> <img src={this.state.img} alt='Rendu du pokemon' /> </p> }
         </div>
       );
     }

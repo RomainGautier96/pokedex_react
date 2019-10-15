@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Axios from 'axios';
-import Loader from './Loader.js'
 
 class ImgPokemon extends Component {
 
@@ -39,66 +38,75 @@ class ImgPokemon extends Component {
 
     render() {
       return (
-        <div className='infoPokemon'>
-            <table>
-                <thead>
-                    <tr> <td colspan='2'>{this.state.namePoke.toUpperCase()}</td></tr>
-                </thead>
-                <tr>
-                    <td>
-                        <img src={this.state.imgFront} />
-                    </td>
-                    <td>
-                        <p> Poids : {this.state.data.weight}</p>
-                        <p> Hauteur : {this.state.data.height} </p>
-                    </td>
-                </tr>
+        <div>           
+            <div className='infoPokemon'>
+                <table>
+                    <thead>
+                        <tr>
+                            <td colSpan='2'>
+                                <b>{this.state.namePoke.toUpperCase()}</b>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src={this.state.imgFront} alt='Rendu du pokemon' />
+                            </td>
+                            <td>
+                                <p> Weight : {this.state.data.weight}</p>
+                                <p> Height : {this.state.data.height} </p>
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td>Habitities</td>
-                    <td>
-                        {this.state.abilities.map((pokemon, i) => {
-                            if(i<3){
-                                return(
-                                <div key={pokemon.ability.name} className="App">
-                                    <p> {pokemon.ability.name.toUpperCase()}</p>
-                                </div>
-                                );
-                            }    
-                            }       
-                        )}
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td>Statistiques</td>
-                    <td>
-                        {this.state.stats.map((pokemon, i) => (
-                                <div key={pokemon.stat.name} className="App">
-                                <p> {pokemon.stat.name.toUpperCase()}</p>
-                            </div>
-                               
-                            )     
-                        )}
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Types</td>
-                    <td>
-                        {this.state.types.map((pokemon, i) => (
-                                <div key={pokemon.type.name} className="App">
-                                    <p> {pokemon.type.name.toUpperCase()}</p>
-                                </div>
-                            )     
-                        )}
-                    </td>
-                </tr>
-            </table>
+                        <tr>
+                            <td>Habilities</td>
+                            <td>
+                                {this.state.abilities.map((pokemon, i) => {
+                                    if(i<3){
+                                        return(
+                                        <div key={pokemon.ability.name} className="App">
+                                            <p> {pokemon.ability.name.toUpperCase()}</p>
+                                        </div>
+                                        );
+                                    }    
+                                    }       
+                                )}
+                            </td>
+                        </tr>
 
 
-            
+                        <tr>
+                            <td>Statistics</td>
+                            <td>
+                                {this.state.stats.map((pokemon, i) => (
+                                        <div key={pokemon.stat.name} className="App">
+                                        <p> {pokemon.stat.name.toUpperCase()} : {pokemon.base_stat}</p>
+                                    </div>
+                                    
+                                    )     
+                                )}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Type(s)</td>
+                            <td>
+                                {this.state.types.map((pokemon, i) => (
+                                        <div key={pokemon.type.name} className="App">
+                                            <p> {pokemon.type.name.toUpperCase()}</p>
+                                        </div>
+                                    )     
+                                )}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div className='retourAccueil'>
+                <a href='/'> Retour </a> 
+            </div>
         </div>
       );
     }

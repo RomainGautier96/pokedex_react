@@ -24,13 +24,13 @@ class Accueil extends Component {
 
     handleChange = e => {
         const result = this.state.data.filter(pokemon =>
-        pokemon.name.includes(e.currentTarget.value)
+        pokemon.name.toUpperCase().includes(e.currentTarget.value.toUpperCase())
         );
 
         console.log(result);
         this.setState({
             newData: result,
-            valueResearch: e.currentTarget.value //e est l'event
+            valueResearch: e.currentTarget.value.toUpperCase() //e est l'event
         });
 
         
@@ -46,7 +46,7 @@ class Accueil extends Component {
           valueResearch={this.state.valueResearch}
           changeValue={this.handleChange}
         />
-         {this.state.newData.length === 0 ? <List data={this.state.data} /> : <List data={this.state.newData} /> };
+         {this.state.newData.length === 0 ? <List data={this.state.data} /> : <List data={this.state.newData} /> }
         
       </div>
     );
